@@ -59,38 +59,6 @@ if (window.gsap) {
       }
     });
 
-    const horizontalSection = document.querySelector("[data-horizontal-section]");
-    const horizontalTrack = horizontalSection && horizontalSection.querySelector("[data-horizontal-track]");
-
-    if (horizontalSection && horizontalTrack) {
-      ScrollTrigger.matchMedia({
-        "(min-width: 1024px)": function () {
-          const distance = Math.max(0, horizontalTrack.scrollWidth - horizontalSection.clientWidth);
-
-          gsap.set(horizontalTrack, { x: 0 });
-
-          if (!distance) {
-            return;
-          }
-
-          gsap.to(horizontalTrack, {
-            x: -distance,
-            ease: "none",
-            scrollTrigger: {
-              trigger: horizontalSection,
-              start: "top top",
-              end: function () {
-                return "+=" + distance;
-              },
-              scrub: true,
-              pin: true,
-              anticipatePin: 1
-            }
-          });
-        }
-      });
-    }
-
     gsap.from("[data-skill-tag]", {
       autoAlpha: 0,
       scale: 0.92,
