@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Luis Silva | Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-[linear-gradient(180deg,#090c10_0%,#0d1117_50%,#121821_100%)] text-ink">
+
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div data-float class="absolute left-[-8rem] top-[-6rem] h-72 w-72 rounded-full bg-ember/15 blur-3xl"></div>
+    <div data-float class="absolute right-[-6rem] top-32 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl"></div>
+  </div>
+
+  <div class="mx-auto flex min-h-screen w-full max-w-[1920px] flex-col px-5 py-6 sm:px-8 lg:px-10">
+
+    <header
+      class="flex flex-col gap-4 border-b border-white/10 pb-6 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.35em] text-mute">Portfolio</p>
+        <p class="mt-2 text-2xl font-semibold tracking-tight">David Luis Silva</p>
+      </div>
+
+      <nav class="flex flex-wrap justify-center gap-4 text-sm text-mute sm:justify-self-center">
+        <a class="transition hover:text-ink" href="#sobre">Sobre</a>
+        <a class="transition hover:text-ink" href="#experiencia">Experiência</a>
+        <a class="transition hover:text-ink" href="#projetos">Projetos</a>
+        <a class="transition hover:text-ink" href="#habilidades">Habilidades</a>
+      </nav>
+
+    </header>
+
+    <main class="flex flex-col gap-6 py-6">
+
+      <section id="sobre" class="px-10 pt-40 pb-40">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,3fr)] lg:items-center">
+          <div>
+            <div data-hero-item
+              class="inline-flex rounded-full bg-ember/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-ember">
+              Software Engineer</div>
+            <h1 data-hero-item class="mt-5 text-5xl font-semibold leading-none tracking-[-0.06em] sm:text-6xl">
+              Construindo
+              produtos web e mobile com foco em entrega real.</h1>
+            <p data-hero-item class="mt-5 text-lg leading-8 text-mute">6 anos de experiência com desenvolvimento full
+              stack,
+              arquitetura de aplicações e automação de fluxo de trabalho.</p>
+            <div data-hero-item class="mt-8 flex flex-col gap-3 sm:flex-row"><a href="mailto:davidsilvaluis@hotmail.com"
+                class="inline-flex min-h-12 items-center justify-center rounded-full bg-ember px-6 text-sm font-semibold text-night transition hover:-translate-y-0.5">Entrar
+                em contato</a><a href="#projetos"
+                class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 text-sm font-semibold transition hover:-translate-y-0.5">Ver
+                projetos</a></div>
+          </div>
+          <div data-hero-item>
+            <!-- <img src="assets/images/hero-2.png" alt="Foto de David Luis Silva"
+              class="w-full rounded-[28px] border border-white/10 object-cover shadow-panel"> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="grid gap-6">
+        <div data-reveal class="rounded-[28px] border border-white/10 bg-white/5 p-7 shadow-panel">
+          <p class="text-xs font-semibold uppercase tracking-[0.24em] text-mute">Contato</p>
+          <div class="mt-5 grid gap-4 text-sm sm:grid-cols-3">
+
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-mute">Email</p>
+              <p class="mt-2 text-base font-medium text-ink">davidsilvaluis@hotmail.com</p>
+            </div>
+
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-mute">Telefone</p>
+              <p class="mt-2 text-base font-medium text-ink">(55) 11 9 6925-5516</p>
+            </div>
+
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-mute">Links</p>
+              <div class="mt-2 flex items-center gap-3">
+                <a href="https://www.linkedin.com/in/david-silva-66789969/" target="_blank" rel="noreferrer"
+                  aria-label="Abrir LinkedIn"
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:-translate-y-0.5 hover:border-white/25">
+                  <img src="./assets/icons/linkedin.svg" alt="LinkedIn" class="h-5 w-5">
+                </a>
+                <a href="https://github.com/daviils" target="_blank" rel="noreferrer" aria-label="Abrir GitHub"
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:-translate-y-0.5 hover:border-white/25">
+                  <img src="./assets/icons/github.svg" alt="GitHub" class="h-5 w-5">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="experiencia" data-reveal class="p-8">
+
+        <div class="flex items-center gap-4">
+          <div class="h-px w-14 bg-ember"></div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em]">Experiência</p>
+        </div>
+
+        <h2 class="mt-6 text-3xl font-semibold tracking-tight">Duka Digital, Jundiaí</h2>
+        <p class="mt-2 text-sm text-mute">Software Engineer | Outubro de 2019 - Maio de 2026</p>
+
+        <div class="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-center">
+          <div class="grid gap-4 text-[15px] leading-8 text-slate-300">
+            <p>
+              Durante minha trajetória na empresa, tive a oportunidade de participar ativamente da construção e evolução
+              de diferentes projetos web e mobile, contribuindo desde as etapas iniciais de arquitetura até a publicação
+              final das aplicações nas lojas.
+            </p>
+            <p>
+              Atuei na definição de tecnologias, estruturação de projetos e estabelecimento de boas práticas de
+              desenvolvimento, ajudando a criar bases sólidas para aplicações escaláveis e de fácil manutenção. Também
+              participei da pesquisa e avaliação de novas tecnologias, frameworks e ferramentas, buscando constantemente
+              alternativas que trouxessem mais produtividade, qualidade e modernização aos produtos da empresa.
+            </p>
+            <p>
+              Além da parte técnica, tive um papel de apoio no time, auxiliando desenvolvedores menos experientes por
+              meio de revisões de código, resolução de problemas e compartilhamento de conhecimento no dia a dia. Essa
+              troca de experiências contribuiu para fortalecer o trabalho em equipe e acelerar o desenvolvimento dos
+              projetos.
+            </p>
+            <p>
+              Outro ponto importante da minha experiência foi o gerenciamento de builds e publicações de aplicativos
+              Android e iOS, incluindo configurações, geração de versões e processos de envio para Google Play e App
+              Store, garantindo que as aplicações fossem entregues de forma estável e organizada.
+            </p>
+            <p>
+              Nos últimos projetos, também comecei a utilizar ferramentas baseadas em inteligência artificial como apoio
+              ao desenvolvimento, automação de tarefas e aumento de produtividade, explorando novas formas de acelerar
+              entregas e otimizar processos dentro do fluxo de trabalho.
+            </p>
+          </div>
+
+          <video class="h-full w-full rounded-2xl border border-white/10 object-cover shadow-2xl" autoplay muted
+            playsinline loop preload="metadata">
+            <source src="./assets/video/duka.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+
+        </div>
+      </section>
+
+      <section id="projetos" data-reveal class="overflow-hidden p-8">
+
+        <div class="flex items-center gap-4">
+          <div class="h-px w-14 bg-ember"></div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em]">Projetos</p>
+        </div>
+
+        <div class="mt-6 overflow-hidden">
+          <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:gap-6">
+
+            <article data-project-card
+              class="w-[88vw] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/5 p-6 sm:w-[32rem] lg:w-[36rem]">
+              <h3 class="text-xl font-semibold tracking-tight">John Deere</h3>
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Numa verdadeira experiência de imersão 360º, a plataforma criada para a John Deere possibilita um tour
+                virtual e interativo, onde o visitante pode circular e visualizar todos os equipamentos em cada detalhe.
+                Uma verdadeira visita monitorada ao showroom da marca, na palma da mão, no conforto da sua sala ou
+                onde o cliente estiver.
+              </p>
+            </article>
+
+            <article data-project-card
+              class="w-[88vw] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/5 p-6 sm:w-[32rem] lg:w-[36rem]">
+              <h3 class="text-xl font-semibold tracking-tight">CNH Opere +</h3>
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Pensado para a atividade agrícola, o Opere+ usa recursos de Inteligência Artificial para orientar e
+                monitorar todas as etapas, como aragem, plantio, pulverização e colheita, proporcionando ao produtor
+                maior eficiência e produtividade. Além disso, a partir das informações geradas durante todo o trabalho,
+                a plataforma ainda realiza análise de dados e gera relatórios, contribuindo com a gestão e a
+                lucratividade dos negócios.
+              </p>
+            </article>
+
+            <article data-project-card
+              class="w-[88vw] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/5 p-6 sm:w-[32rem] lg:w-[36rem]">
+              <h3 class="text-xl font-semibold tracking-tight">App Tá na Rede</h3>
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                O aplicativo TIM Tá na Rede é uma plataforma focada em otimizar a comunicação interna e fornecer aos 25
+                mil colaboradores informações atualizadas e relevantes de maneira ágil e centralizada. Com essa
+                ferramenta administrativa, a equipe pode criar, atualizar e gerenciar ofertas de forma eficiente,
+                garantindo que novidades sejam rapidamente disponibilizadas no aplicativo.
+              </p>
+            </article>
+
+            <article data-project-card
+              class="w-[88vw] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/5 p-6 sm:w-[32rem] lg:w-[36rem]">
+              <h3 class="text-xl font-semibold tracking-tight">Eficiência Vença</h3>
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Vença é uma campanha de incentivo nacional da Nestlé, desenvolvida para estimular a criatividade de
+                representantes comerciais. Projetamos e desenvolvemos o aplicativo mobile que permite que os
+                representantes fotografem e postem as suas gôndolas diretamente no app, onde terão a opção de
+                participar da campanha. Os colaboradores podem ser recompensados por sua criatividade e empenho,
+                além de contar com um sistema de galerias para salvar e favoritar seus trabalhos.
+              </p>
+            </article>
+
+            <article data-project-card
+              class="w-[88vw] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/5 p-6 sm:w-[32rem] lg:w-[36rem]">
+              <h3 class="text-xl font-semibold tracking-tight">Pluxee</h3>
+              <p class="mt-1 text-sm font-medium uppercase tracking-[0.16em] text-mute">App Partiu Lisboa</p>
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Pluxee é uma campanha de incentivo com timeline interativa, voltada para promover o engajamento entre os
+                colaboradores. Desenvolvemos o hotsite e aplicativos mobile, além de realizar a programação,
+                manutenção e hospedagem. Ao interagir na plataforma, os colaboradores acumulam pontos que podem ser
+                trocados por prêmios, promovendo um engajamento contínuo e colaborativo dentro da empresa.
+              </p>
+            </article>
+
+            <article data-project-card
+              class="w-[88vw] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/5 p-6 sm:w-[32rem] lg:w-[36rem]">
+              <h3 class="text-xl font-semibold tracking-tight">Eurofarma</h3>
+              <p class="mt-1 text-sm font-medium uppercase tracking-[0.16em] text-mute">Sistemas Internos</p>
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                A partir das demandas recebidas, desenvolvemos um conjunto de soluções com foco em versatilidade,
+                segurança e agilidade para os processos internos da Eurofarma.
+              </p>
+            </article>
+
+            <article data-project-card
+              class="w-[88vw] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/5 p-6 sm:w-[32rem] lg:w-[36rem]">
+              <h3 class="text-xl font-semibold tracking-tight">Saalve</h3>
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Plataforma de e-commerce concebida e desenvolvida para atender à comunidade de Heliópolis, considerando
+                sua dinâmica e peculiaridades. Conecta lojistas com seus clientes, além de integrar o serviço de
+                delivery de pedidos.
+              </p>
+            </article>
+
+            <article data-project-card
+              class="w-[88vw] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/5 p-6 sm:w-[32rem] lg:w-[36rem]">
+              <h3 class="text-xl font-semibold tracking-tight">Plataforma Digital</h3>
+              <p class="mt-1 text-sm font-medium uppercase tracking-[0.16em] text-mute">E-commerce</p>
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Muito mais do que um e-commerce tradicional, o Pedido Digital é uma plataforma dinâmica e customizável
+                de compra e venda de produtos, que integra os serviços essenciais para iniciar as operações do seu
+                negócio. A solução disponibiliza ainda um painel administrativo que permite monitorar e gerenciar as
+                operações em tempo real.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades" data-reveal class="p-8">
+
+        <div class="flex items-center gap-4">
+          <div class="h-px w-14 bg-ember"></div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em]">Habilidades</p>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">Angular</span>
+
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">Tailwind CSS</span>
+
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">Bootstrap</span>
+
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">Flutter</span>
+
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">ASP.NET</span>
+
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">GraphQL</span>
+
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">Docker</span>
+
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">Linux</span>
+
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">Git</span>
+
+          <span data-skill-tag
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">Gulp</span>
+
+          <span data-skill-tag class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold">IA
+            Generativa</span>
+        </div>
+      </section>
+
+      <section data-reveal class="p-8">
+
+        <div class="flex items-center gap-4">
+          <div class="h-px w-14 bg-ember"></div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em]">Formação</p>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p class="text-lg font-semibold">UNIP - Universidade Paulista, Jundiaí</p>
+          <p class="mt-2 text-[15px] leading-7 text-slate-300">Bacharelado em Ciência da Computação</p>
+          <p class="mt-1 text-sm text-mute">2015 - 2019</p>
+        </div>
+
+      </section>
+
+    </main>
+    <footer class="mt-auto border-t border-white/10 pt-6 text-center text-sm text-mute">Disponível para oportunidades em
+      desenvolvimento web, mobile e engenharia de software.</footer>
+
+  </div>
+  <script src="./assets/script/script.js"></script>
+</body>
+</html>
