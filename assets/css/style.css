@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(180deg, #090c10 0%, #0d1117 50%, #121821 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+.hero {
+    padding-top: 96px;
+}
+
+.hero-image {
+    max-width: min(420px, 82vw);
+    border: 3px solid #fff;
+    filter: drop-shadow(0 28px 60px rgba(0, 0, 0, 0.45));
+}
+
+.hero-description {
+    max-width: 680px;
+}
