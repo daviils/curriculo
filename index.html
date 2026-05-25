@@ -44,8 +44,35 @@
         </div>
     </header>
 
-    <section class="hero min-vh-100 d-flex align-items-center justify-content-center text-center px-4">
-        <div class="container">
+    <style>
+        @media (max-width: 575.98px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero .btn {
+                font-size: 1rem;
+                padding: 0.75rem 1.5rem !important;
+            }
+
+            [data-hero-floats] span {
+                width: 48px !important;
+                height: 48px !important;
+            }
+
+            [data-hero-floats] img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+    <section
+        class="hero position-relative min-vh-100 d-flex align-items-center justify-content-center text-center px-4">
+        <div class="container position-relative" style="z-index: 1;">
             <img src="./assets/images/me.png" alt="David Luis Silva"
                 class="hero-image rounded-circle object-fit-cover mb-4" width="180" height="180" data-hero-item>
             <h1 class="display-4 fw-bold text-white mb-3" data-hero-item>David Luis Silva</h1>
@@ -60,6 +87,64 @@
                 <span class="material-symbols-outlined" style="font-size: 18px;" aria-hidden="true">open_in_new</span>
             </a>
         </div>
+        <div data-hero-floats>
+            <span data-float-number="1"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; top: 12%; left: 8%;" aria-hidden="true">
+                <img src="./assets/images/skill/angular.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="2"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; top: 18%; left: 28%;" aria-hidden="true">
+                <img src="./assets/images/skill/flutter.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="3"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; top: 10%; right: 18%;" aria-hidden="true">
+                <img src="./assets/images/skill/tailwind.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="4"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; top: 32%; right: 7%;" aria-hidden="true">
+                <img src="./assets/images/skill/bootstrap.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="5"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; top: 44%; left: 14%;" aria-hidden="true">
+                <img src="./assets/images/skill/aspnet.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="6"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; top: 52%; right: 23%;" aria-hidden="true">
+                <img src="./assets/images/skill/graphql.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="7"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; bottom: 24%; left: 5%;" aria-hidden="true">
+                <img src="./assets/images/skill/docker.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="8"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; bottom: 10%; left: 32%;" aria-hidden="true">
+                <img src="./assets/images/skill/linux.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="9"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; bottom: 12%; right: 34%;" aria-hidden="true">
+                <img src="./assets/images/skill/git.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="10"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; bottom: 20%; right: 9%;" aria-hidden="true">
+                <img src="./assets/images/skill/gulp.svg" alt="" width="42" height="42">
+            </span>
+            <span data-float-number="11"
+                class="position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center fw-bold text-dark"
+                style="width: 75px; height: 75px; top: 10%; left: 48%;" aria-hidden="true">
+                <img src="./assets/images/skill/generative-ai.svg" alt="" width="42" height="42">
+            </span>
+
+        </div>
     </section>
 
     <section id="sobre" class="py-5 px-4">
@@ -67,7 +152,8 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-12">
                     <p class="text-white-50 text-uppercase fw-semibold mb-2">Sobre</p>
-                    <h2 class="display-6 fw-bold text-white mb-0">Engenharia com foco em produto, clareza e resultado.
+                    <h2 class="display-6 fw-bold text-white mb-0">Engenharia com foco em produto,<br>clareza e
+                        resultado.
                     </h2>
                 </div>
                 <div class="col-lg-12">
@@ -155,7 +241,7 @@
         </div>
     </section>
 
-    <section id="habilidades" class="py-5 px-4">
+    <!-- <section id="habilidades" class="py-5 px-4">
         <div class="container py-5" data-reveal>
             <div class="row g-5">
                 <div class="col-lg-12">
@@ -190,7 +276,7 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="formacao" class="py-5 px-4">
         <div class="container py-5" data-reveal>
@@ -211,7 +297,8 @@
     </section>
 
     <footer class="py-4 px-4">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-white-50">
+        <div
+            class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-white-50">
             <p class="mb-0">Disponível para oportunidades em desenvolvimento web, mobile e engenharia de software.</p>
             <p class="mb-0">&copy; 2026 David. Todos os direitos reservados.</p>
         </div>

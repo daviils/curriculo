@@ -1,22 +1,22 @@
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        ink: "#f3efe7",
-        mute: "#9ca3af",
-        night: "#0d1117",
-        ember: "#ff8a5b",
-        fog: "#161b22"
-      },
-      boxShadow: {
-        panel: "0 24px 70px rgba(0, 0, 0, 0.35)"
-      },
-      fontFamily: {
-        sans: ["Segoe UI", "Arial", "sans-serif"]
-      }
-    }
-  }
-};
+// tailwind.config = {
+//   theme: {
+//     extend: {
+//       colors: {
+//         ink: "#f3efe7",
+//         mute: "#9ca3af",
+//         night: "#0d1117",
+//         ember: "#ff8a5b",
+//         fog: "#161b22"
+//       },
+//       boxShadow: {
+//         panel: "0 24px 70px rgba(0, 0, 0, 0.35)"
+//       },
+//       fontFamily: {
+//         sans: ["Segoe UI", "Arial", "sans-serif"]
+//       }
+//     }
+//   }
+// };
 
 if (window.gsap) {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -28,13 +28,28 @@ if (window.gsap) {
       gsap.registerPlugin(ScrollTrigger);
     }
 
-    gsap.from("[data-hero-item]", {
-      autoAlpha: 0,
-      y: 28,
-      duration: 0.9,
-      ease: "power3.out",
-      stagger: 0.12
-    });
+    const heroItems = gsap.utils.toArray("[data-hero-item]");
+
+    if (heroItems.length) {
+      const heroTimeline = gsap.timeline({
+        defaults: {
+          duration: 0.9,
+          ease: "power3.out"
+        }
+      });
+
+      heroTimeline
+        .from(heroItems[0], {
+          autoAlpha: 0,
+          scale: 0.92,
+          y: 18
+        })
+        .from(heroItems.slice(1), {
+          autoAlpha: 0,
+          y: 28,
+          stagger: 0.12
+        }, "-=0.38");
+    }
 
     if (hasScrollTrigger) {
       gsap.to("[data-page-header]", {
@@ -97,16 +112,19 @@ if (window.gsap) {
       });
     }
 
-    if (document.querySelector("[data-float]")) {
-      gsap.to("[data-float]", {
-        y: 26,
-        x: 12,
-        duration: 6,
+    const heroFloats = gsap.utils.toArray("[data-hero-floats] span");
+
+    heroFloats.forEach(function (float, index) {
+      gsap.to(float, {
+        x: index % 2 === 0 ? 18 : -18,
+        y: index % 3 === 0 ? 28 : -24,
+        scale: index % 2 === 0 ? 1.08 : 0.92,
+        duration: 4.8 + (index % 4) * 0.6,
+        delay: index * 0.12,
         ease: "sine.inOut",
         repeat: -1,
-        yoyo: true,
-        stagger: 1.2
+        yoyo: true
       });
-    }
+    });
   }
 }
